@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>AMTube</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html"></a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../index.html#one">ABOUT ME</a></li>
+							<li><a href="../index.html#two">Education</a></li>
+							<li><a href="../index.html#four">PROJECTS</a></li>
+							<li><a href="../index.html#footer">GET IN TOUCH</a></li>
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>AMTUBE</h2>
+								<p>Help users in sharing videos with each other.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">About The Project</h3>
+									<p>AMTube is a web-app where users can publish videos to share content with other users. It offers the following functionalities:</p>
+										<ul>
+											<li>presents a landing page with the latest published videos;</li>
+											<li>allows to manage user authentication;</li>
+											<li>presents a user profile page to update your credentials;</li>
+											<li>allows the users to publish, search and watch videos;</li>
+											<li>allows the users to subscribe to their favourite content creators to easily access their videos.</li>
+										</ul>
+
+
+									<p>The project was carried out following the agile methodologies (<a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">SCRUM</a>) and the documentation produced during the development is available here: <a href="https://github.com/AngeloC99/AMTube/tree/main/Documentation">AMTube Documentation</a>.</p>
+
+									<h3 class="major">System Architecture</h3>
+									<p>The system architecture is based on the orchestration of the microservices, each running on its own Docker Container and accessing its own data (following the Database per Service pattern). The microservices are:</p>
+									<ul>
+										<li><b>Frontend</b>: developed in Angular (relying on HTML+CSS+TypeScript), it is
+											responsible for the UI, dealing with the visualization and the interaction with
+											the user.</li>
+										<li><b>Api Gateway</b>: leveraging on Netflix Zuul, it serves as a single entry point for
+											the client and routes the user requests coming from the backend to the
+											proper micro-service. It also contacts the User Management micro-service to
+											verify if the request is coming from an authorized user.</li>
+										<li><b>User Management</b>: handles registration/authentication (relying on a JWT
+											token) /access to the user profile.</li>
+										<li><b>Subscriptions/Notifications</b>: deals with the subscriptions issued by each user,
+											allowing the user to be notified whenever one of his subscription uploads a
+											new video, receiving the communication of the upload from a queue handled
+											by RabbitMQ.</li>
+										<li><b>Video Management</b>: handles the upload/visualization/modification/deletion
+											of videos. It also allows the user to like/comment a video.</li>
+										<li><b>Video Search</b>: it deals with the search of a video and relies on ElasticSearch.</li>
+									</ul>
+								</div>
+							</div>
+
+
+						<!-- Slideshow container -->
+						<div class="slideshow-container">
+
+							<!-- Full-width images with number and caption text -->
+							<div class="mySlides fade">
+								<img src="../images/AMTube/architecture.png" style="width:100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="../images/AMTube/home.png" style="width:100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="../images/AMTube/video.png" style="width:100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="../images/AMTube/subs.png" style="width:100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="../images/AMTube/user.png" style="width:100%">
+							</div>
+
+							<!-- Next and previous buttons -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+						<br>
+
+						<!-- The dots/circles -->
+						<div style="text-align:center">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+							<span class="dot" onclick="currentSlide(3)"></span>
+							<span class="dot" onclick="currentSlide(4)"></span>
+							<span class="dot" onclick="currentSlide(5)"></span>
+						</div>
+
+
+
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h3 class="major">Source code</h3>
+							<p class="parProject">If you are curious and you'd like to have more details about the project, check out the source code available on GitHub.</p>
+							<ul class="contact">
+								<li class="icon brands fa-github"><a href="https://github.com/AngeloC99/AMTube">AMTube</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/slideshow.js"></script>
+
+	</body>
+
+</html>

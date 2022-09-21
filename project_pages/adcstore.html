@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>ADC-Store</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Page Wrapper -->
+<div id="page-wrapper">
+
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="../index.html"></a></h1>
+		<nav>
+			<a href="#menu">Menu</a>
+		</nav>
+	</header>
+
+	<!-- Menu -->
+	<nav id="menu">
+		<div class="inner">
+			<h2>Menu</h2>
+			<ul class="links">
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../index.html#one">ABOUT ME</a></li>
+				<li><a href="../index.html#two">Education</a></li>
+				<li><a href="../index.html#four">PROJECTS</a></li>
+				<li><a href="../index.html#footer">GET IN TOUCH</a></li>
+			</ul>
+			<a href="#" class="close">Close</a>
+		</div>
+	</nav>
+
+	<!-- Wrapper -->
+	<section id="wrapper">
+		<header>
+			<div class="inner">
+				<h2>ADC-Store</h2>
+				<p>The e-commerce that rewards you.</p>
+			</div>
+		</header>
+
+		<!-- Content -->
+		<div class="wrapper">
+			<div class="inner">
+
+				<h3 class="major">About The Project</h3>
+				<p>ADC-Store is an e-commerce which allows the user to shop and choose the payment and shipping methodologies. The Web-app addresses the necessity of a supermarket chain to have its services digitalized, in particular in response to the pandemic emergency we lived in 2020.</p>
+				<p>Types of users:</p>
+				<ul>
+					<li><b>Administrator</b>: he/she handles the available goods and has access to the registered users' data.</li>
+					<li><b>Registered User</b>: he/she can shop on the e-commerce, by gaining points to get prices, and can save his/her favorite shopping carts.</li>
+					<li><b>Not Registered User</b>: he/she can see the product for sale and can register to access the functionalities reserved to the registered users.</li>
+				</ul>
+
+				<p>The documentation produced during the project's development is available at: <a href="https://github.com/AngeloC99/ADC-Store/tree/main/Documentazione">ADC-Store Documentation</a>.</p>
+
+				<h3 class="major">System Architecture</h3>
+				<p>The system architecture follows the MVC pattern and it is developed in four layers:</p>
+				<ul>
+					<li><b>View</b>: developed in HTML+CSS+JavaScript and relying on Smarty as template engine, it is responsible for the UI, dealing with the visualization and the interaction with the user.</li>
+					<li><b>Control</b>: it listens to events triggered by the view (or another external source) and executes the appropriate method on the model.</li>
+					<li><b>Entity</b> (<b>Model</b>): it contains business logic and application data and it was developed in PHP.</li>
+					<li><b>Foundation</b>: it deals with the persistence of the data and handle the communication with the database (MariaDB).</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
+
+			<!-- Full-width images with number and caption text -->
+			<div class="mySlides fade">
+				<img src="../images/ADCStore/home.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img src="../images/ADCStore/goods.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img src="../images/ADCStore/good.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img src="../images/ADCStore/profile.png" style="width:100%">
+			</div>
+			<div class="mySlides fade">
+				<img src="../images/ADCStore/domain_model.png" style="width:100%">
+			</div>
+
+
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		</div>
+
+
+
+
+	</section>
+
+	<!-- Footer -->
+	<section id="footer">
+		<div class="inner">
+			<h3 class="major">Source code</h3>
+			<p class="parProject">If you are curious and you'd like to have more details about the project, check out the website and the source code available on GitHub.</p>
+			<ul class="contact">
+				<li id="linkADC" class="icon brands">
+					<a href="https://adcstore.altervista.org/">ADC-Store</a>
+				</li>
+				<li class="icon brands fa-github"><a href="https://github.com/AngeloC99/ADC-Store">ADC-Store On GitHub</a></li>
+			</ul>
+		</div>
+	</section>
+
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrollex.min.js"></script>
+<script src="../assets/js/browser.min.js"></script>
+<script src="../assets/js/breakpoints.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/slideshow.js"></script>
+
+</body>
+
+</html>
